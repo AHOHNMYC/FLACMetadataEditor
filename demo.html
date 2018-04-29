@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FLAC Metadata editor</title>
+    <script src="./FLACMetadataEditor.js"></script>
+    <script src="./demo.js"></script>
+    <style>
+        * {
+            font-family: monospace;
+        }
+        #drop {
+            border: 5px dashed gold;
+            padding: 10px;
+            user-select: none;
+            cursor: default;
+        }
+        html {
+            position: absolute;
+            width: 100%;
+            min-height: 100%;
+        }
+        #drop, html {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #down_button {
+            margin-left: 2em;
+            cursor: pointer;
+        }
+        #drop_text {
+            margin-left: 2em;
+        }
+        .hidden {
+            display: none;
+        }
+        #meta_table, #images {
+            width: 100%;
+            border: 1px dashed darkslateblue;
+        }
+        .image {
+            float: left;
+        }
+        .image::before {
+            content: ' ';
+            clear: both;
+        }
+        .image img {
+            height: 128px;
+        }
+        .remove_image {
+            position: relative;
+            left: -1em;
+            background-color: gainsboro;
+            width: 2em !important;
+            height: 2em;
+            top: calc(-128px + 1em + 2px);
+            padding: 3px;
+            cursor: pointer;
+        }
+        #copy {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: x-large;
+        }
+        input {
+            width: 99%;
+        }
+    </style>
+</head>
+<body>
+    <div id="drop">
+        <button id="openfile_button">Open</button>
+        <span id="drop_text">Drop FLAC file on this page</span>
+        <button id="down_button" class="hidden">Download</button>
+    </div>
+    <br>
+    <div id="images" class="hidden">
+        <!--<span id="images_text">Drop images on this page</span>-->
+    </div>
+    <br>
+    <table id="meta_table" class="hidden">
+        <tbody>
+            <tr>
+                <td>Field</td>
+                <td>Value</td>
+                <td><button id="add_row_button">+</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <span id="copy">© AHOHNMYC, 2018</span>
+</body>
+</html>
