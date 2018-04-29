@@ -1,6 +1,8 @@
 # FLACMetadataEditor
 Script allows you to edit metadata in FLAC files
 
+*inspired by [egoroof's Browser ID3 Writer](https://github.com/egoroof/browser-id3-writer)*
+
 # Usage:
 ```javascript
 // # Creating editor instance:
@@ -45,9 +47,9 @@ const url = URL.createObjectURL(blob);
 
 # What else?
 ### Editable full FLAC metadata except CUESHEET
-May be accessed through `editor.metadata`.
+May be accessed through `editor.metadata`
 
-Do `console.log(editor)` to explore it. Structures have self-descriptive names.
+Do `console.log(editor)` to explore it. Structures have self-descriptive names
 
 ### Chains
 As all public functions return this, we are able to create trains. e.g. this returns changed ArrayBuffer with only one comment — `TITLE=The Whistleblowers`
