@@ -3,6 +3,8 @@ Script allows you to edit metadata in FLAC files
 
 *inspired by [egoroof's Browser ID3 Writer](https://github.com/egoroof/browser-id3-writer)*
 
+### [Live demo](https://ahohnmyc.github.io/FLACMetadataEditor)
+
 # Usage:
 ```javascript
 // # Creating editor instance:
