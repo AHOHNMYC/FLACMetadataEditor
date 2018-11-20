@@ -183,7 +183,7 @@ window.addEventListener('load', ()=>{
     t = document.getElementById('meta_table');
 
     document.getElementById('down_button').addEventListener('click', e=>{
-        editor._vorbisComment.vendorString = "AHOHNMYC's JS FLACMetadataWriter v" + editor.scriptVersion;
+        editor._vorbisComment.vendorString = "AHOHNMYC/FLACMetadataEditor v" + editor.scriptVersion;
         editor.removeComment();
         // Remove images
         editor.metadata.blocks = editor.metadata.blocks.filter(block=>block.blockType!=='PICTURE');
